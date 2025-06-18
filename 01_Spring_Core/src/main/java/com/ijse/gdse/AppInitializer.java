@@ -1,5 +1,6 @@
 package com.ijse.gdse;
 
+import com.ijse.gdse.bean.MyConnection;
 import com.ijse.gdse.bean.SpringBean;
 import com.ijse.gdse.bean.TestBean1;
 import com.ijse.gdse.bean.TestBean2;
@@ -14,18 +15,18 @@ public class AppInitializer {
         context.refresh();
 
         //class name
-        SpringBean springBean =  context.getBean(SpringBean.class);
-        System.out.println(springBean);
+//        SpringBean springBean =  context.getBean(SpringBean.class);
+//        System.out.println(springBean);
 
         //Bean Id
-        SpringBean springBean1 = (SpringBean) context.getBean("springBean");
-        System.out.println(springBean1);
-        TestBean1 testBean1 = (TestBean1) context.getBean("testBean1");
-        System.out.println(testBean1);
+//        SpringBean springBean1 = (SpringBean) context.getBean("springBean");
+//        System.out.println(springBean1);
+//        TestBean1 testBean1 = (TestBean1) context.getBean("testBean1");
+//        System.out.println(testBean1);
 
         //bean ID and class name
-        TestBean2 testBean2 = (TestBean2) context.getBean("testBean2", TestBean2.class);
-        System.out.println(testBean2);
+//        TestBean2 testBean2 = (TestBean2) context.getBean("testBean2", TestBean2.class);
+//        System.out.println(testBean2);
 
 //        Runtime.getRuntime().addShutdownHook(new Thread() { //register shutdown Hook
 //            @Override
@@ -33,6 +34,15 @@ public class AppInitializer {
 //                context.close();
 //            }
 //        });
+
+        MyConnection myConnection = context.getBean(MyConnection.class);
+        System.out.println(myConnection);
+
+        MyConnection myConnection2 = context.getBean(MyConnection.class);
+        System.out.println(myConnection2);
+
+        MyConnection myConnection3 = (MyConnection) context.getBean("sa", MyConnection.class);
+        System.out.println(myConnection3);
 
         context.registerShutdownHook();
 

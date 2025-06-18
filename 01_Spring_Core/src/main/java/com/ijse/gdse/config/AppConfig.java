@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan(basePackageClasses = TestBean2.class)
 public class AppConfig {
-    @Bean
-    public MyConnection myConnection() {
-        return myConnection();
+    @Bean("sa")
+    public MyConnection getConnection() {
+        return new MyConnection();
     }
 }
 

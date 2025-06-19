@@ -1,13 +1,12 @@
 package com.ijse.gdse.bean;
 
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component //context eka register wenawa bean ekakata
 @Scope("prototype")
 public class TestBean1 {
-    TestBean1(){
+    public TestBean1() {
         System.out.println("TestBean1 Constructor");
     }
 }

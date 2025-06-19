@@ -2,8 +2,9 @@ package com.ijse.gdse.bean;
 
 import org.springframework.stereotype.Component;
 
-@Component
-public class MyConnection {
 
-    return
+public class MyConnection {
+    public MyConnection(){
+        System.out.println("MyConnection");
+    }
 }

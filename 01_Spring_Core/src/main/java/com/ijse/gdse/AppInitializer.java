@@ -35,17 +35,28 @@ public class AppInitializer {
 //            }
 //        });
 
-        MyConnection myConnection = context.getBean(MyConnection.class);
-        System.out.println(myConnection);
+//        MyConnection myConnection = context.getBean(MyConnection.class);
+//        System.out.println(myConnection);
+//
+//        MyConnection myConnection2 = context.getBean(MyConnection.class);
+//        System.out.println(myConnection2);
+//
+//        MyConnection myConnection3 = (MyConnection) context.getBean("sa", MyConnection.class);
+//        System.out.println(myConnection3);
+//
+//        context.registerShutdownHook();
 
-        MyConnection myConnection2 = context.getBean(MyConnection.class);
+        TestBean1 bean1 = context.getBean(TestBean1.class);
+        TestBean1 bean2 = context.getBean(TestBean1.class);
+        System.out.println(bean1);
+        System.out.println(bean2);
+
+        MyConnection myConnection1 = (MyConnection) context.getBean("sa");
+        MyConnection myConnection2 = (MyConnection) context.getBean("sa");
+        System.out.println(myConnection1);
         System.out.println(myConnection2);
 
-        MyConnection myConnection3 = (MyConnection) context.getBean("sa", MyConnection.class);
-        System.out.println(myConnection3);
-
         context.registerShutdownHook();
-
 
     }
 }

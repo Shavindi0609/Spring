@@ -1,0 +1,19 @@
+package com.ijse.gdse;
+
+import com.ijse.gdse.bean.MyConnection;
+import com.ijse.gdse.bean.TestBean1;
+import com.ijse.gdse.config.AppConfig;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Main {
+    public static void main(String[] args) {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.register(AppConfig.class);
+        context.refresh();
+
+        MyConnection myConnection = context.getBean(MyConnection.class);
+        System.out.println(myConnection);
+        context.registerShutdownHook(); //jvn eka shotdown wena movment eka allata context eka close karanawa
+
+    }
+}

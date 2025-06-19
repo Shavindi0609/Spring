@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Scope;
 @ComponentScan(basePackages = "com.ijse.gdse.bean")
 public class AppConfig {
    @Bean("sa")
-   @Scope("prototype")
+   @Scope("prototype") // bean eka context eka athulata daganne na e nisa bean life cycle eke destroy part eka prototype bean ekakata na
     public MyConnection getConnection() {
         return new MyConnection();
     }

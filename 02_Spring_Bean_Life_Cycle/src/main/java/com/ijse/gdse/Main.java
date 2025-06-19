@@ -11,8 +11,14 @@ public class Main {
         context.register(AppConfig.class);
         context.refresh();
 
-        MyConnection myConnection = context.getBean(MyConnection.class);
-        System.out.println(myConnection);
+        MyConnection myConnection1 = context.getBean(MyConnection.class);
+        System.out.println(myConnection1);
+
+
+        MyConnection myConnection2 = context.getBean(MyConnection.class);
+        System.out.println(myConnection1);
+        System.out.println("================================");
+        System.out.println(myConnection2);
         context.registerShutdownHook(); //jvn eka shotdown wena movment eka allata context eka close karanawa
 
     }

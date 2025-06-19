@@ -10,8 +10,8 @@ public class Test2 {
    @Autowired
    DI di;
 
-    public Test2() {
-        System.out.println("Test2 Constructor Called");
+    public Test2(DI di) {
+       this.di = di;
     }
 
     public void test(){

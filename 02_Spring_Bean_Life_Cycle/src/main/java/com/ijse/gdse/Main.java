@@ -19,7 +19,7 @@ public class Main {
         System.out.println(myConnection1);
         System.out.println("================================");
         System.out.println(myConnection2);
-        context.registerShutdownHook(); //jvn eka shotdown wena movment eka allata context eka close karanawa
+        context.registerShutdownHook(); //jvm eka shotdown wena movment eka allata context eka close karanawa
 
     }
 }

@@ -13,5 +13,7 @@
     <file url="file://$PROJECT_DIR$/06_Multiple-Configuration/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/07_Run_Time_Value_Injection/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/07_Run_Time_Value_Injection/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08_Spring_Environment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08_Spring_Environment/src/main/resources" charset="UTF-8" />
   </component>
 </project>

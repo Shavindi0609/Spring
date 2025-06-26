@@ -11,12 +11,17 @@ public class Main {
         context.register(AppConfig.class);
         context.refresh();
 
-        Map<String,String> env = System.getenv();
-        for(Map.Entry<String,String> entry : env.entrySet()){
-            System.out.println(entry.getKey()+"="+entry.getValue());
-        }
+//        Map<String,String> env = System.getenv();
+//        for(Map.Entry<String,String> entry : env.entrySet()){
+//            System.out.println(entry.getKey()+"="+entry.getValue());
+//        }
 
 //        System.out.println(env.get("OS"));
+
+
+        //************ Predefined Java Properties *************************
+//        System.getProperties().list(System.out);
+
         context.registerShutdownHook();
     }
 }

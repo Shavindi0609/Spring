@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="07_Run_Time_Value_Injection" />
+        <module name="06_Multiple-Configuration" />
         <module name="04_FullMode_VS_LightMode" />
         <module name="05_Configuration" />
         <module name="01_Spring_Core" />

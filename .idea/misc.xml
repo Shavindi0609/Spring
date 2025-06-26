@@ -10,6 +10,8 @@
         <option value="$PROJECT_DIR$/04_FullMode_VS_LightMode/pom.xml" />
         <option value="$PROJECT_DIR$/05_Configurations/pom.xml" />
         <option value="$PROJECT_DIR$/05_Configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/06_Multiple-Configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/07_Run_Time_Value_Injection/pom.xml" />
       </list>
     </option>
   </component>

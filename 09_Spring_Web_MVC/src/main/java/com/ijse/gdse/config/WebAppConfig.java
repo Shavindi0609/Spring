@@ -11,4 +11,5 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @ComponentScan(basePackages ={ "com.ijse.gdse.controller","com.ijse.gdse.bean"})
 @EnableWebMvc
 public class WebAppConfig {
+
 }

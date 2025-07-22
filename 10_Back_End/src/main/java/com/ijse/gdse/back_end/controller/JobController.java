@@ -8,6 +8,9 @@ import com.ijse.gdse.back_end.service.impl.JobServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,15 +29,17 @@ public class JobController {
 
     @PostMapping("create")
     public void createJob(@RequestBody JobDTO jobDTO) {
-//        jobService.saveJob(jobDTO);
-//        System.out.println(jobDTO.getJobTitle());
-
         jobRepository.save(modelMapper.map(jobDTO, Job.class));
     }
 
     @PutMapping("update")
     public void updateJob(@RequestBody JobDTO jobDTO) {
         jobService.updateJob(jobDTO);
+    }
+
+    @DeleteMapping("delete/{id}")
+    public void deleteJob(@PathVariable Integer id) {
+        jobService.deleteJob(id);
     }
 
     @GetMapping("getall")
@@ -52,5 +57,11 @@ public class JobController {
         return jobService.getAllJobsByKeyword(keyword);
     }
 
+    // ✅ Paginated endpoint
+    @GetMapping("/paginated")
+    public Page<JobDTO> getPaginatedJobs(@RequestParam(defaultValue = "0") int page,
+                                         @RequestParam(defaultValue = "5") int size) {
+        return jobService.getPaginatedJobs(PageRequest.of(page, size));
+    }
 
 }

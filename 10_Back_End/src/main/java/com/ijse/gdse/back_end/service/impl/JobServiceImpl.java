@@ -8,6 +8,8 @@ import com.ijse.gdse.back_end.service.JobService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -56,6 +58,11 @@ public class JobServiceImpl implements JobService {
         }
     }
 
+    @Override
+    public void deleteJob(Integer id) {
+        jobRepository.deleteById(id);
+    }
+
 
     @Override
     public List<JobDTO> getAllJobs() {
@@ -70,6 +77,12 @@ public class JobServiceImpl implements JobService {
     public List<JobDTO> getAllJobsByKeyword(String keyword) {
        List<Job> list = jobRepository.findJobByJobTitleContainingIgnoreCase(keyword);
        return modelMapper.map(list,new TypeToken<List<JobDTO>>(){}.getType());
+    }
+
+    @Override
+    public Page<JobDTO> getPaginatedJobs(Pageable pageable) {
+        return jobRepository.findAll(pageable)
+                .map(job -> modelMapper.map(job, JobDTO.class));
     }
 }
 

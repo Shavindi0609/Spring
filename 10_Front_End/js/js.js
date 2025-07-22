@@ -112,4 +112,51 @@ $(document).ready(function () {
         });
     });
 
+    // Search as you type
+    $('#searchInput').on('input', function () {
+        const keyword = $(this).val().trim();
+
+        if (keyword === "") {
+            loadJobs(); // empty → load all
+        } else {
+            $.ajax({
+                url: 'http://localhost:8080/api/v1/job/search/' + encodeURIComponent(keyword),
+                type: 'GET',
+                success: function (jobs) {
+                    let jobTable = '';
+                    $.each(jobs, function (index, job) {
+                        jobTable += `
+                        <tr>
+                            <td>${index + 1}</td>
+                            <td>${job.jobTitle}</td>
+                            <td>${job.company}</td>
+                            <td>${job.location}</td>
+                            <td>${job.type}</td>
+                            <td>${job.status}</td>
+                            <td>
+                                <button class="btn btn-sm btn-danger">Delete</button>
+                                <button 
+                                    type="button" 
+                                    class="btn btn-warning btn-sm edit-btn"
+                                    data-id="${job.id}"
+                                    data-title="${job.jobTitle}"
+                                    data-company="${job.company}"
+                                    data-location="${job.location}"
+                                    data-type="${job.type}"
+                                    data-description="${job.jobDescription}">
+                                    Update
+                                </button>
+                            </td>
+                        </tr>`;
+                    });
+                    $('#jobsTableBody').html(jobTable);
+                },
+                error: function () {
+                    console.error("Failed to search jobs.");
+                    $('#jobsTableBody').html('<tr><td colspan="7">No jobs found.</td></tr>');
+                }
+            });
+        }
+    });
+
 });

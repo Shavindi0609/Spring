@@ -14,7 +14,7 @@ public class SpringBean implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println(osName);
+        System.out.println(osName); //key value widihata
         System.out.println(dbname);
     }
 }

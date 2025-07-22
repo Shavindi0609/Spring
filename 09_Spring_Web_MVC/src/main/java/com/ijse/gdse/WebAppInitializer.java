@@ -5,7 +5,9 @@ import com.ijse.gdse.config.WebRootConfig;
 import org.jspecify.annotations.Nullable;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+
     @Override
     protected Class<?> @Nullable [] getRootConfigClasses() {
         return new Class[]{WebRootConfig.class};

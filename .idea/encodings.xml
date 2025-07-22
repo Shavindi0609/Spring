@@ -17,5 +17,13 @@
     <file url="file://$PROJECT_DIR$/08_Spring_Environment/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/09_Spring_Web_MVC/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/09_Spring_Web_MVC/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10_Back_End/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10_REST_Controllers/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10_REST_Controllers/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/11_REST_Controllers/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/11_REST_Controllers/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/12_Back_End/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/12_Front_End/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/12_Front_End/src/main/resources" charset="UTF-8" />
   </component>
 </project>

@@ -32,7 +32,7 @@ public class SpringBean implements InitializingBean {
     private String key;
 
     public SpringBean() {
-        System.out.println(name);//Life cycle ekedi propery walata value assign wenna nam object eka create wela inna oni.(Insansiation).methendi thama object eka create wela iwara na. e hinda value eka assign wenne na null enne
+        System.out.println(name);//Life cycle ekedi propery walata value assign wenna nam object eka create wela inna oni.(Insansiation).methendi thama object eka create wela iwara na. e hinda value eka assign wenne na null enne.(run karala balanna)
     }
 
     @Override
@@ -40,4 +40,5 @@ public class SpringBean implements InitializingBean {
         System.out.println(key);
         System.out.println(name);
     }
+
 }

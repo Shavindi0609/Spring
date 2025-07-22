@@ -2,20 +2,42 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="07_Run_Time_Value_Injection" />
+        <module name="11_REST_Controllers" />
         <module name="08_Spring_Environment" />
         <module name="06_Multiple-Configuration" />
         <module name="09_Spring_Web_MVC" />
         <module name="04_FullMode_VS_LightMode" />
         <module name="05_Configuration" />
+        <module name="Back_End (1)" />
         <module name="01_Spring_Core" />
         <module name="02_Spring_Bean_Life_Cycle" />
         <module name="03_Dependancy_Injection_With_Spring" />
       </profile>
+      <profile name="Annotation profile for 10_Back_End" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="Back_End" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="10_REST_Controllers" target="17" />
+      <module name="12_Front_End" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Back_End" options="-parameters" />
+      <module name="Back_End (1)" options="-parameters" />
+    </option>
   </component>
 </project>

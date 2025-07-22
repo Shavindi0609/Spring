@@ -3,7 +3,7 @@ package com.ijse.gdse.bean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component //bean ekak widihata register wenawa
 public class SpringBeanThree {
 
 

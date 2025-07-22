@@ -1,0 +1,26 @@
+package com.ijse.gdse;
+
+import com.ijse.gdse.config.WebAppConfig;
+import com.ijse.gdse.config.WebRootConfig;
+import jakarta.servlet.annotation.WebServlet;
+import org.jspecify.annotations.Nullable;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+public class Main extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+
+    @Override
+    protected Class<?> @Nullable [] getRootConfigClasses() {
+        return new Class[]{WebRootConfig.class};
+    }
+
+    @Override
+    protected Class<?> @Nullable [] getServletConfigClasses() {
+        return new Class[]{WebAppConfig.class};
+    }
+
+    @Override
+    protected String[] getServletMappings() {
+        return new String[]{"/"};
+    }
+}
